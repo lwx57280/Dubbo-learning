@@ -8,7 +8,7 @@
     <artifactId>Dubbo-Client</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

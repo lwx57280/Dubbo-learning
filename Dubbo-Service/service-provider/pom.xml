@@ -89,6 +89,21 @@
             <version>6.1.26</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.learn.dubbo.spi</groupId>
+            <artifactId>MysqlDriver</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.learn.dubbo.spi</groupId>
+            <artifactId>DataBaseDriver</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.learn.dubbo.spi</groupId>
+            <artifactId>OracleDriver</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 

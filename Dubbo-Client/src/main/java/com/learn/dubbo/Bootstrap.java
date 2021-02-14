@@ -1,5 +1,7 @@
 package com.learn.dubbo;
 
+import com.alibaba.dubbo.common.extension.ExtensionLoader;
+import com.alibaba.dubbo.rpc.Protocol;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -25,7 +27,11 @@ public class Bootstrap {
             System.out.println(helloService.sayHello("cong zhi"));
 //            Thread.sleep(1000);
 //        }
+        Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class).getExtension("MyProtocol");
+//        System.out.println(protocol.getDefaultPort());
 
+
+        System.out.println("defaultPort:"+ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension().getDefaultPort());
         System.in.read();
     }
 }

@@ -1,1 +1,3 @@
+com\learn\dubbo\spi\DubboProtocol.class
 com\learn\dubbo\TestMock.class
+com\learn\dubbo\Bootstrap.class
