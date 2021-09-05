@@ -1,7 +1,5 @@
 package com.learn.dubbo;
 
-import com.alibaba.dubbo.common.extension.ExtensionLoader;
-import com.alibaba.dubbo.rpc.Protocol;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
@@ -18,20 +16,21 @@ import java.io.IOException;
  */
 public class Bootstrap {
     public static void main(String[] args) throws IOException, InterruptedException {
+        final int QUANTITY= 100000;
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("dubbo-client.xml");
-//        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < QUANTITY; i++) {
             // 获取远程服务代理
             HelloService helloService = (HelloService) context.getBean("helloService");
 
-            System.out.println(helloService.sayHello("cong zhi"));
+            System.out.println(helloService.sayHello("cong zhi =:" + i));
 //            Thread.sleep(1000);
-//        }
-        Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class).getExtension("MyProtocol");
+        }
+//        Protocol protocol = ExtensionLoader.getExtensionLoader(Protocol.class).getExtension("MyProtocol");
 //        System.out.println(protocol.getDefaultPort());
 
 
-        System.out.println("defaultPort:"+ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension().getDefaultPort());
+//        System.out.println("defaultPort:"+ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension().getDefaultPort());
         System.in.read();
     }
 }
