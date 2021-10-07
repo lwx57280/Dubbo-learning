@@ -10,9 +10,11 @@
 
     <modules>
         <module>Dubbo-Client</module>
+        <module>dubbo-p</module>
+        <module>dubbo-c</module>
     </modules>
 
-    <name>${artifactId}</name>
+    <name>${project.artifactId}</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 

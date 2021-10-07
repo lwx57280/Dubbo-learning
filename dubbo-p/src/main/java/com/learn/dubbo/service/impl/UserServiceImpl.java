@@ -3,6 +3,7 @@ package com.learn.dubbo.service.impl;
 
 import com.learn.dubbo.service.UserService;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.config.annotation.Method;
 
 /**
  * 通过@DubboService注解 服务发布
@@ -14,7 +15,7 @@ import org.apache.dubbo.config.annotation.DubboService;
  * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
-@DubboService
+@DubboService(methods = {@Method(name = "doKill", executes = 10, actives = 10)}, connections = 10, protocol = "dubbo")
 public class UserServiceImpl implements UserService {
 
     @Override
